@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class ProjectNotFoundAdvice {
     @ResponseBody
     @ExceptionHandler(ProjectNotFoundException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND);
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     String EntityNotFoundAdvice(ProjectNotFoundException ex){
         return ex.getMessage();
     }
