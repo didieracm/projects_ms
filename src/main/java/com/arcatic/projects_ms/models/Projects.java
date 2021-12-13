@@ -9,6 +9,7 @@ public class Projects {
     private String developerteam;
     private String teammembers;
     private String devlangused;
+    private String frameworksused;
     private  String url_project;
     private  String category;
     private  String url_videodemo;
@@ -19,13 +20,14 @@ public class Projects {
     private String potentialities;
     private String limitations;
 
-    public Projects(String projectname, String description, String url_repositories, String developerteam, String teammembers, String devlangused, String url_project, String category, String url_videodemo, String university, String cycle, String year, String demoinstructions, String potentialities, String limitations) {
+    public Projects(String projectname, String description, String url_repositories, String developerteam, String teammembers, String devlangused, String frameworksused, String url_project, String category, String url_videodemo, String university, String cycle, String year, String demoinstructions, String potentialities, String limitations) {
         this.projectname = projectname;
         this.description = description;
         this.url_repositories = url_repositories;
         this.developerteam = developerteam;
         this.teammembers = teammembers;
         this.devlangused = devlangused;
+        this.frameworksused = frameworksused;
         this.url_project = url_project;
         this.category = category;
         this.url_videodemo = url_videodemo;
@@ -83,6 +85,14 @@ public class Projects {
 
     public void setDevlangused(String devlangused) {
         this.devlangused = devlangused;
+    }
+
+    public String getFrameworksused() {
+        return frameworksused;
+    }
+
+    public void setFrameworksused(String frameworksused) {
+        this.frameworksused = frameworksused;
     }
 
     public String getUrl_project() {
