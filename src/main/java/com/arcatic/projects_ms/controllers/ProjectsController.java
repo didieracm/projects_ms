@@ -3,9 +3,7 @@ package com.arcatic.projects_ms.controllers;
 import com.arcatic.projects_ms.exceptions.ProjectNotFoundException;
 import com.arcatic.projects_ms.models.Projects;
 import com.arcatic.projects_ms.repositories.ProjectsRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ProjectsController {
@@ -19,6 +17,11 @@ public class ProjectsController {
     Projects getProject(@PathVariable String projectname){
         return projectsRepository.findById(projectname)
                 .orElseThrow( () -> new ProjectNotFoundException("No se encontró un proyecto con el projectname:" + projectname));
+    }
+
+    @PostMapping("/projects")
+    Projects newProject(@RequestBody Projects project){
+        return projectsRepository.save(project);
     }
 }
 
